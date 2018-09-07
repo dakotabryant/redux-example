@@ -7,11 +7,10 @@ import { testOne, testTwo } from './actions';
 class App extends Component {
   clickHandler = () => {
     this.props.dispatch(testOne());
-    this.props.dispatch(testTwo('dakota'));
   };
   async componentDidMount() {
     const cards = await fetch('aldskjfaslfd.com');
-    this.props.dispatch(initCards(cards));
+    this.props.dispatch(testTwo(cards));
   }
 
   render() {
