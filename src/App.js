@@ -9,10 +9,10 @@ class App extends Component {
     this.props.dispatch(testOne());
     this.props.dispatch(testTwo('dakota'));
   };
-  componentDidMount = async () => {
+  async componentDidMount() {
     const cards = await fetch('aldskjfaslfd.com');
     this.props.dispatch(initCards(cards));
-  };
+  }
 
   render() {
     return (
